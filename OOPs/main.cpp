@@ -13,7 +13,43 @@ class Animal{
 
     // constructor
     Animal(){
+        this->weight = 0;
+        this->age = 0;
+        this->name = "";
         cout << "constructor is called" << endl;
+    }
+
+    // parameterized constructor
+
+    Animal(int age){
+        this->age = age;
+        cout << "Parameterized constructor " << endl;
+    }
+
+
+    Animal (int age, int weight){
+        this->age = age;
+        this->weight = weight;
+        cout << "Parameterized constructor 2 " << endl;
+    }
+
+    Animal (int age, int weight, string name){
+        this->age = age;
+        this->weight = weight;
+        this->name = name;
+        cout << "Parameterized constructor 3 " << endl;
+    }
+
+
+    // copy constructor
+
+    Animal(Animal &obj){
+        this->age = obj.age;
+        this->name = obj.name;
+        this->weight = obj.weight;
+
+        cout << "I am inside copy constructor" << endl;
+
     }
 
 
@@ -32,9 +68,19 @@ class Animal{
         return weight;
     }
 
+    // setter
+
     void setWeight(int weight){
         this->weight = weight;
     }
+
+    ~Animal(){
+        cout << "I am inside destructor " << endl;
+    }
+
+
+
+
 };
 
 int main(){
@@ -72,6 +118,21 @@ int main(){
     suresh->sleep();
 
 
+    Animal a;
+   
 
+    Animal * b = new Animal(29);
+
+    Animal *c = new Animal(10,20);
+
+    Animal *d = new Animal(10,10,"ram");
+
+    Animal e(a);
+
+    delete b;
+    delete c;
+    delete d;
+
+   
     return 0;  
 }
