@@ -19,7 +19,7 @@ int main()
         s.pop();
     }
 
-    cout << endl;
+    
 
     return 0;
 }
