@@ -22,6 +22,8 @@ void printMiddle(stack<int> &s, int totalSize)
     printMiddle(s, totalSize);
 
     s.push(temp);
+
+
 }
 
 int main()
@@ -36,6 +38,8 @@ int main()
     s.push(50);
     s.push(60);
     s.push(70);
+    s.push(80);
+    s.push(90);
 
     printMiddle(s, s.size());
 
