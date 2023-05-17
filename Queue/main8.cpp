@@ -16,7 +16,7 @@ void print(queue<int> q)
 
 void reverseKElement(queue<int> &q, int k){
 
-    if(k == 1) return;
+    if(k == 0) return;
 
     int temp = q.front();
     q.pop();
@@ -41,6 +41,14 @@ int main(){
 
     print(q);
     reverseKElement(q,4);
+
+    int p = q.size() - 4;
+
+    while(p){
+        int temp = q.front();
+        q.pop();
+        q.push(temp);
+    }
     print(q);
     
 
