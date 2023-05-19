@@ -34,9 +34,26 @@ Node* buildTree(){
 
 }
 
+void inorder(Node *root)
+{
+
+    if (root == NULL)
+        return;
+
+    inorder(root->left);
+    cout << root->data << " ";
+    inorder(root->right);
+}
+
 int main(){
 
+     Node *root = NULL;
 
+    root = buildTree();
+
+    inorder(root);
+
+    // 90 20 11 -1 -1 13 -1 -1 50 -1 -1
 
     return 0;
 }
