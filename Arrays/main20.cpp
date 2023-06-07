@@ -17,9 +17,9 @@ int lastOccurence(int *arr, int n, int element)
         if (arr[m] == element)
         {
             ans = m;
-            s = m + 1;
+            s = m +1;
         }
-
+        
         else if (arr[m] < element)
             s = m + 1;
         else
@@ -34,7 +34,8 @@ int lastOccurence(int *arr, int n, int element)
 int main()
 {
 
-    int arr[] = {1, 2, 4, 4, 4, 4, 4, 4, 8, 9, 11, 15, 19, 23};
+
+    int arr[] = {1, 2, 4,4 ,4, 4, 4, 4, 8, 9, 11, 15, 19, 23};
 
     int n = 14;
     int element = 4;
